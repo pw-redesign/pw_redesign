@@ -1,0 +1,195 @@
+﻿@using Microsoft.Extensions.Configuration;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Passport Application Status</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500|Roboto+Condensed:400,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    @if (IsSectionDefined("HeadIncludes"))
+    {
+        @RenderSection("HeadIncludes")
+    }
+    <link href="~/css/custom.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <!--<link href="~/css/Site.css" rel="stylesheet" /> -->
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <!-- Google Analytics -->
+
+</head>
+<body>
+
+    <!--Hamburger Menu-->
+    <div class="opssHamburgerMenu">
+        <nav class="navbar navbar-toggleable navbar-inverse d-sm-none" style="background-color:#06284C;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="footerTitle">Travel.State.Gov</li>
+                    <li class="nav-item"> <a class="footerLink" href=$"{Configuration["links:tsghome:link"]}">Travel.State.Gov</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$"Configuration["links:passports:link"]">U.S. Passports</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$"Configuration["links:international:link"]">International Travel</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$"Configuration["links:visas:link"]">U.S. Visas</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["links:adoption:link"]">Intercountry Adoptions</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["links:abduction:link"]">International Parental Child Abduction</a> </li>
+
+                    <li class="footerTitle">Popular Links</li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.tsghome:link"]">Home</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.advisories:link"]">Travel Advisories</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.newsroom:link"]">Newsroom</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.about:link"]">About Us</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.contact:link"]">Contact Us</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.careers:link"]">Careers</a> </li>
+                    <li class="nav-item"> <a class="footerLink" href=$$"Configuration["linkss.embassy:link"]">Find U.S. Embassies & Consulates</a> </li>
+
+                    <li class="footerTitle">Stay Connected</li>
+                    <li class="nav-item footerLink">
+                        <a class="socialMeadiaLink" href=$"Configuration["links:blog:link"]"> <i class="fas fa-star" aria-hidden="true"></i> </a>
+                        <a class="socialMeadiaLink" href=$"Configuration["links:facebook:link"]"> <i class="fab fa-facebook-f" aria-hidden="true"></i> </a>
+                        <a class="socialMeadiaLink" href=$"Configuration["links:flickr:link"]"> <i class="fab fa-flickr" aria-hidden="true"></i> </a>
+                        <a class="socialMeadiaLink" href=$"Configuration["links:twitter:link"]"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a class="socialMeadiaLink" href=$"Configuration["links:youtube:link"]"> <i class="fab fa-youtube" aria-hidden="true"></i> </a>
+                        <a class="socialMeadiaLink" href=$"Configuration["links:rss:link"]"><i class="fas fa-rss" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li class="footerTitle">Legal Resources</li>
+                    <li class="nav-item"> <a class="footerLink" href=$"Configuration["links:legal:link"]">Info for Lawyers and Judges</a>
+                    <li class="nav-item"> <a class="footerLink" href=$"Configuration["links:consularnotification:link"]">Info for U.S. Law Enforcement</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </div><!-- /hamburger menu for portrait phones -->
+    <!-- header -->
+    
+   
+    <div class="opssHeader">
+        <div class="container">
+            <div class="opssHeaderBackground">
+                <div class="row pl-sm-3 py-3">
+                    <div class="stateLogoFrame ml-1 ml-md-2">
+                        <a href=$"Configuration["links:tsghome:link"]">
+                            <img src="~/Images/statelogo.png" class="img-fluid" />
+                        </a>
+                    </div>
+                    <a class="titleFrameLink" href=$"Configuration["links:passports:link"]">
+                        <div class="titleFrame ml-2 ml-md-3 mt-2 mt-md-3 text-white">
+                            <div class="h1 titleFrameLineOne">Travel.State.Gov</div>
+                            <div class="titleFrameLineTwo">U.S. DEPARTMENT OF STATE — BUREAU OF CONSULAR AFFAIRS</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /header -->
+    <!-- Body -->
+    <div id="theContainersContainer">
+        <div class="container py-4">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- /Body -->
+    <!-- footer -->
+    <div class="opssFooter py-2 hidden-xs-down">
+        <!-- displayed in mobile landscape and up -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="d-flex flex-column">
+                        <div class="footerTitle">Travel.State.Gov</div>
+                        <div class="footerLink"> <a href=$"Configuration["links:tsghome:link"]">Travel.State.Gov</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:passports:link"]">U.S. Passports</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:international:link"]">International Travel</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:visas:link"]">U.S. Visas</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:adoption:link"]">Intercountry Adoptions</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:abduction:link"]">International Parental Child Abduction</a> </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-flex flex-column">
+                        <div class="footerTitle">Popular Links</div>
+                        <div class="footerLink"> <a href=$"Configuration["links:tsghome:link"]">Home</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:advisories:link"]">Travel Advisories</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:newsroom:link"]">Newsroom</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:about:link"]">About Us</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:contact:link"]">Contact Us</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:careers:link"]">Careers</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:embassy:link"]">Find U.S. Embassies & Consulates</a> </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-flex flex-column">
+                        <div class="footerTitle">Stay Connected</div>
+                        <div class="footerLink">
+                            <a class="socialMeadiaLink" href=$"Configuration["links:blog:link"]"> <i class="fas fa-star" aria-hidden="true"></i> </a>
+                            <a class="socialMeadiaLink" href=$"Configuration["links:facebook:link"]"> <i class="fab fa-facebook-f" aria-hidden="true"></i> </a>
+                            <a class="socialMeadiaLink" href=$"Configuration["links:flickr:link"]"> <i class="fab fa-flickr" aria-hidden="true"></i> </a>
+                            <a class="socialMeadiaLink" href=$"Configuration["links:twitter:link"]"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a class="socialMeadiaLink" href=$"Configuration["links:youtube:link"]"> <i class="fab fa-youtube" aria-hidden="true"></i> </a>
+                            <a class="socialMeadiaLink" href=$"Configuration["links:rss:link"]"><i class="fas fa-rss" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="footerTitle legalResourceTitle">Legal Resources</div>
+                        <div class="footerLink"> <a href=$"Configuration["links:legal:link"]">Info for Lawyers and Judges</a> </div>
+                        <div class="footerLink"> <a href=$"Configuration["links:consularnotification:link"]">Info for U.S. Law Enforcement</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /footer -->
+    <!-- tsgdisclaimer -->
+    <div class="tsgDisclaimer text-white py-2">
+        <div class="container">
+            <div class="row pl-3">
+                <div class="buttonFlagFrame pt-1">
+                    <img src="~/Images/Flag_of_the_United_States.svg" class="img-fluid" style="width:100px;" />  <!-- bug with IE 11 and svg format - need to use width 100 instead of img-fluid -->
+                </div>
+                <div class="tsgDisclaimerLinkFrame ml-1 ml-md-3">
+                    <div>
+                        <a href=$"Configuration["links:privacy:link"]">Privacy</a> | <a href=$"Configuration["links:copyright:link"]">Copyright and Disclaimer</a>
+                        | <a href=$"Configuration["links:foia:link"]">FOIA</a>  |  <a href=$"Configuration["links:nofear:link"]">No Fear Act Data</a>
+                        | <a href=$"Configuration["links:oig:link"]">Office of the Inspector</a> | <a href=$"Configuration["links:usagov:link"]">USA.gov</a>
+                        | <a href=$"Configuration["links:gobiernousa:link"]">GobiernoUSA.gov</a>
+                    </div>
+                    <div>
+                        This site is managed by the <a href=$"Configuration["links:statehome:link"]">U.S. Department of State</a>.
+                        External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /tsgdisclaimer -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery-ajax-unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            try {
+                $("input[type='text']").each(function () {
+                    $(this).attr("autocomplete", "off");
+                });
+            }
+            catch (e)
+            { }
+        });
+
+    </script>
+
+
+    @if (IsSectionDefined("ScriptIncludes"))
+    {
+        @RenderSection("ScriptIncludes")
+    }
+</body>
+</html>
+

@@ -1,0 +1,145 @@
+﻿@Html.Partial("Partial2")
+
+<div class="row text-center">
+    <div class="col-12">
+        <h1>Your Fees</h1>
+        <div>We just need a few more details to calculate your fees.</div>
+    </div>
+</div>
+
+<hr class="mb-3" />
+
+<div class="row">
+    <div class="col-12">
+          
+        <div class="mb-3">
+            Where are you applying?
+                
+            <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input id="US" name="applyingFrom" type="radio" class="custom-control-input" checked required/>
+                    <label class="custom-control-label" for="US">US</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="Canada" name="applyingFrom" type="radio" class="custom-control-input" required />
+                    <label class="custom-control-label" for="Canada">Canada</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="OtherOverseas" name="applyingFrom" type="radio" class="custom-control-input" required />
+                    <label class="custom-control-label" for="OtherOverseas">Other Overseas</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-cst-primary d-flex my-4">
+            <i class="fas fa-info-circle fa-3x mr-3 align-self-center"></i>
+            <div><strong>Note:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet laboriosam similique ipsa ipsum nesciunt quis temporibus beatae rerum reiciendis eum pariatur perferendis minima, exercitationem saepe libero dolorum et in eaque.</div>
+        </div>
+
+        <div class="mb-3">
+            What processing time would you like?
+            <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input id="Routine" name="processingTime" type="radio" class="custom-control-input" checked required />
+                    <label class="custom-control-label" for="Routine">Routine (4-6 weeks)</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="Expedited" name="processingTime" type="radio" class="custom-control-input" required />
+                    <label class="custom-control-label" for="Expedited">Expedited (2-3 weeks)</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="ExpeditedAtAgency" name="processingTime" type="radio" class="custom-control-input" required />
+                    <label class="custom-control-label" for="ExpeditedAtAgency">Expedited at Agency (less than 2 weeks)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            What shipping method would you like?
+            <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input id="Regular" name="shippingMethod" type="radio" class="custom-control-input" checked required />
+                    <label class="custom-control-label" for="shippingMethod">Regular Delivery</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="Expedited" name="shippingMethod" type="radio" class="custom-control-input" required />
+                    <label class="custom-control-label" for="shippingMethod">1-2 Day Delivery</label>
+                </div>
+            </div>
+        </div>
+        
+        <table class="table mt-5">
+            <thead>
+                <tr class="h3">
+                    <th scope="col">Fees</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody class="text-muted">
+                <tr>
+                    <td>
+                        <div>Passport Book 52-pages</div>
+                        <div>Standard book processing</div>
+                        <div>Overnight book shipping</div>
+                    </td>
+                    <td>
+                        <div>$110.00</div>
+                        <div>$0.00</div>
+                        <div>$26.66</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Passport Card</div>
+                        <div>Standard card processing</div>
+                        <div>Overnight card shipping</div>
+                    </td>
+                    <td>
+                        <div>$30.00</div>
+                        <div>$0.00</div>
+                        <div>$0.00</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Acceptance Fee</div>
+                    </td>
+                    <td>
+                        <div>$35.00</div>
+                    </td>
+                </tr>  
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <div class="h3"><strong>Total</strong></div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="h4">
+                    <td>
+                        <div>Payable to State</div>
+                        <div>Payable to Acceptance Facility</div>
+                    </td>
+                    <td>
+                        <div>$166.66</div>
+                        <div>$35.00</div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        
+        
+        
+
+    </div>
+</div>
+
+@section ScriptIncludes
+{
+    <script type="text/javascript">
+        $("#pw-progress-bar").addClass("d-flex flex-row mb-4");
+        $(".pw-progress-bar-step").addClass("text-center text-black rounded py-3");
+    </script>
+}

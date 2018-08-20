@@ -1,0 +1,10 @@
+C:\Users\NUpchurch\Source\passportWizard\bin\Debug\netcoreapp2.0\passportWizard.deps.json
+C:\Users\NUpchurch\Source\passportWizard\bin\Debug\netcoreapp2.0\passportWizard.runtimeconfig.json
+C:\Users\NUpchurch\Source\passportWizard\bin\Debug\netcoreapp2.0\passportWizard.runtimeconfig.dev.json
+C:\Users\NUpchurch\Source\passportWizard\bin\Debug\netcoreapp2.0\passportWizard.dll
+C:\Users\NUpchurch\Source\passportWizard\bin\Debug\netcoreapp2.0\passportWizard.pdb
+C:\Users\NUpchurch\Source\passportWizard\obj\Debug\netcoreapp2.0\passportWizard.csproj.CoreCompileInputs.cache
+C:\Users\NUpchurch\Source\passportWizard\obj\Debug\netcoreapp2.0\passportWizard.AssemblyInfoInputs.cache
+C:\Users\NUpchurch\Source\passportWizard\obj\Debug\netcoreapp2.0\passportWizard.AssemblyInfo.cs
+C:\Users\NUpchurch\Source\passportWizard\obj\Debug\netcoreapp2.0\passportWizard.dll
+C:\Users\NUpchurch\Source\passportWizard\obj\Debug\netcoreapp2.0\passportWizard.pdb
