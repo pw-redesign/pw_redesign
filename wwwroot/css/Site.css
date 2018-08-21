@@ -368,18 +368,6 @@ input[type="checkbox"].input-validation-error
 
 
 /* custom control css */
-.custom-radio .custom-control-input:checked~custom-control-label::before
-{
-    background-color: #003875 !important;
-}
-
-.custom-control-input:checked~.custom-control-label::before 
-{
-    background-color: #003875 !important;
-    box-shadow: none !important
- }  
-
-
 table tfoot tr:first-child td
 {
     padding-bottom: 0 !important;

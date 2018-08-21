@@ -1,9 +1,21 @@
 $theme-colors: (
+    "primary": #003875,
+    "info": #003875,
+
     "cst-primary":  #003875,
     "cst-notification": #FCE68E,
     "cst-featured-content": #E4EEF4
 );
 
-
-
 @import "node_modules/bootstrap/scss/bootstrap";
+
+.alert {
+    @include media-breakpoint-up(xs)
+    {
+        padding: .2rem 0;
+    }
+    @include media-breakpoint-up(lg)
+    {
+        padding: .5rem 1rem;
+    }
+}
