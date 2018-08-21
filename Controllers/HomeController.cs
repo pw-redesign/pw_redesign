@@ -24,5 +24,15 @@ namespace passportWizard.Controllers
             return View();
         }
 
+        public IActionResult ProgressBars()
+        {
+            return View();
+        }
+
+        public IActionResult LostOrStolen1()
+        {
+            return View();
+        }
+
     }
 }
